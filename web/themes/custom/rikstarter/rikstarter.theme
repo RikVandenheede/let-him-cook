@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the rikstarter theme.
+ */
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function rikstarter_preprocess_page(array &$variables) {
+  $variables['test'] = [
+    '#test' => 'test'
+  ];
+
+  dump($variables);
+}
