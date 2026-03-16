@@ -1,0 +1,12 @@
+# Global library loaded on every page
+global:
+  version: 1.0.0
+  js:
+    src/scripts/main.ts: {}
+  css:
+    theme:
+      src/styles/main.css: {}
+  dependencies:
+    - core/drupal
+    - core/once
+    - core/drupalSettings

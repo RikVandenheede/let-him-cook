@@ -1,0 +1,19 @@
+name: Rikstarter
+type: theme
+description: "Custom theme for Rikstarter website"
+core_version_requirement: ^10 || ^11
+base theme: false
+
+libraries:
+  - rikstarter/global
+
+regions:
+  header: Header
+  sidebar: Sidebar
+  highlighted: Highlighted
+  content: Content
+  footer: Footer
+
+vite:
+  enableInAllLibraries: true
+  enableInAllComponents: true
