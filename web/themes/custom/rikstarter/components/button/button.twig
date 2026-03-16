@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Button component.
+ *
+ * Props:
+ *   - label (string, required): Visible button text.
+ *   - variant (string): 'primary' | 'secondary' | 'danger'. Default: 'primary'.
+ *   - disabled (bool): Whether the button is disabled. Default: false.
+ *   - type (string): HTML type attribute. Default: 'button'.
+ *
+ * Slots:
+ *   - icon: Optional icon rendered before the label.
+ */
+#}
+
+{% set classes = [
+  'btn',
+  'btn--' ~ (variant ?? 'primary'),
+  disabled ? 'btn--disabled' : '',
+] %}
+
+<button
+  type="{{ type ?? 'button' }}"
+  class="{{ classes | join(' ') }}"
+  {{ disabled ? 'disabled' : '' }}
+>
+  {% if icon %}
+    <span class="btn__icon" aria-hidden="true">
+      {{ icon }}
+    </span>
+  {% endif %}
+
+  <span class="btn__label">{{ label }}</span>
+</button>
+

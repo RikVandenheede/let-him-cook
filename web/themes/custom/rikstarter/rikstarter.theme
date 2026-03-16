@@ -12,6 +12,4 @@ function rikstarter_preprocess_page(array &$variables) {
   $variables['test'] = [
     '#test' => 'test'
   ];
-
-  dump($variables);
 }

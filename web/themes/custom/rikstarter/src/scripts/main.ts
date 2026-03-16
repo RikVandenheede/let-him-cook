@@ -1,9 +1,9 @@
-((Drupal, once) => {
+((Drupal) => {
   'use strict';
 
   Drupal.behaviors.main = {
-    attach(context: Document | HTMLElement) {
+    attach() {
       console.log('test')
     },
   };
-})(Drupal, once);
+})(Drupal);
