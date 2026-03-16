@@ -25,6 +25,7 @@
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar_local_tasks": "^2.0",
         "drupal/twig_tweak": "^3.4",
+        "drupal/vite": "^1.5",
         "drush/drush": "^13.7"
     },
     "conflict": {
