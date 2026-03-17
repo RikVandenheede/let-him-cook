@@ -9,10 +9,6 @@ const origin = `${process.env.DDEV_PRIMARY_URL}:${port}`;
 export default defineConfig({
   plugins: [
     checker({
-      eslint: {
-        useFlatConfig: true,
-        lintCommand: "eslint . --ext .js,.ts,.mjs,.cjs",
-      },
       stylelint: {
         lintCommand: 'stylelint "{src,components}/**/*.css" --allow-empty-input --formatter string',
       },
