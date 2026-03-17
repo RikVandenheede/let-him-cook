@@ -1,5 +1,3 @@
-h1 {
-  display: block;
-}
+@import '@styles/base/_index.css';
 
 @layer base, components, overrides, utilities;

@@ -23,6 +23,7 @@ export default defineConfig({
         "src/styles/**/*.css",
         "!src/styles/**/_*.css",
         "src/scripts/**/*.ts",
+        "src/fonts/**/*.{woff,woff2,eot,ttf,otf}",
         "components/**/*.css",
         "components/**/*.ts",
       ]),
@@ -63,7 +64,7 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, "src/styles"),
       "@scripts": path.resolve(__dirname, "src/scripts"),
       "@components": path.resolve(__dirname, "components"),
-      "@fonts": path.resolve(__dirname, "src/assets/fonts"),
+      "@fonts": path.resolve(__dirname, "src/fonts"),
     },
   },
 });
