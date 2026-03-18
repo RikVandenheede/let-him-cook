@@ -5,32 +5,43 @@
  *
  * Props:
  *   - label (string, required): Visible button text.
- *   - variant (string): 'primary' | 'secondary' | 'danger'. Default: 'primary'.
+ *   - variant (string): 'primary' | 'secondary'. Default: 'primary'.
  *   - disabled (bool): Whether the button is disabled. Default: false.
- *   - type (string): HTML type attribute. Default: 'button'.
+ *   - type (string): HTML type attribute ('button' | 'submit' | 'reset'). Default: 'button'.
+ *   - url (string): Optional URL. When provided, renders an <a> tag instead of <button>.
  *
  * Slots:
  *   - icon: Optional icon rendered before the label.
  */
 #}
 
+{% set variant = variant ?? 'primary' %}
 {% set classes = [
   'btn',
-  'btn--' ~ (variant ?? 'primary'),
-  disabled ? 'btn--disabled' : '',
+  'btn--' ~ variant,
+  disabled ? 'btn--disabled',
 ] %}
 
-<button
-  type="{{ type ?? 'button' }}"
-  class="{{ classes | join(' ') }}"
-  {{ disabled ? 'disabled' : '' }}
->
-  {% if icon %}
-    <span class="btn__icon" aria-hidden="true">
-      {{ icon }}
-    </span>
-  {% endif %}
-
-  <span class="btn__label">{{ label }}</span>
-</button>
-
+{% if url %}
+  <a
+    href="{{ disabled ? '#' : url }}"
+    class="{{ classes | join(' ') }}"
+    {% if disabled %}aria-disabled="true"{% endif %}
+  >
+    {% if icon %}
+      <span class="btn__icon" aria-hidden="true">{{ icon }}</span>
+    {% endif %}
+    <span class="btn__label">{{ label }}</span>
+  </a>
+{% else %}
+  <button
+    type="{{ type ?? 'button' }}"
+    class="{{ classes | join(' ') }}"
+    {% if disabled %}disabled aria-disabled="true"{% endif %}
+  >
+    {% if icon %}
+      <span class="btn__icon" aria-hidden="true">{{ icon }}</span>
+    {% endif %}
+    <span class="btn__label">{{ label }}</span>
+  </button>
+{% endif %}

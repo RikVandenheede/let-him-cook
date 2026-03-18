@@ -1,7 +1,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 name: Button
-status: experimental
-description: A simple button component.
+status: stable
+description: A button component with primary and secondary variants.
 group: Atoms
 props:
   type: object
@@ -20,7 +20,6 @@ props:
       enum:
         - primary
         - secondary
-        - danger
     disabled:
       type: boolean
       title: Disabled
@@ -35,6 +34,10 @@ props:
         - button
         - submit
         - reset
+    url:
+      type: string
+      title: URL
+      description: Optional URL to render the button as an anchor tag.
 slots:
   icon:
     title: Icon
