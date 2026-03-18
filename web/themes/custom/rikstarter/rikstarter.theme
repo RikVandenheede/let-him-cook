@@ -13,3 +13,12 @@ function rikstarter_preprocess_page(array &$variables) {
     '#test' => 'test'
   ];
 }
+
+/**
+ * Implements hook_preprocess_region().
+ */
+function rikstarter_preprocess_region(array &$variables) {
+  $variables['test'] = [
+    '#test' => 'test'
+  ];
+}

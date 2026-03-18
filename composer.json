@@ -22,8 +22,10 @@
         "drupal/core-project-message": "^11.3",
         "drupal/core-recipe-unpack": "^11.3",
         "drupal/core-recommended": "^11.3",
+        "drupal/eu_cookie_compliance": "^1.29",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar_local_tasks": "^2.0",
+        "drupal/paragraphs": "^1.20",
         "drupal/twig_tweak": "^3.4",
         "drupal/vite": "^1.5",
         "drush/drush": "^13.7"
