@@ -60,11 +60,12 @@
 .nav__menu {
   padding: 6rem;
   position: absolute;
-  inset: auto 0 0 100dvw;
+  inset: auto 0 0 0;
   width: 100dvw;
   background: var(--white);
   z-index: 1000;
-  transition: left 0.4s var(--ease);
+  transform: translateX(100%);
+  transition: transform 0.4s var(--ease);
   height: calc(100dvh - 7.4rem - var(--drupal-displace-offset-top, 0px));
   /*box-shadow: var(--shade3);*/
 
@@ -75,6 +76,8 @@
     inset: unset;
     padding: unset;
     box-shadow: unset;
+    transform: none;
+    transition: none;
   }
 
   nav > ul {
@@ -93,7 +96,7 @@
 }
 
 .nav__menu.open {
-  inset: auto 0 0 0;
+  transform: translateX(0);
 }
 
 /*.nav__overlay {*/
