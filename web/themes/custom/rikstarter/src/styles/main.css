@@ -1,3 +1,4 @@
 @import '@styles/base/_index.css';
+@import '@styles/drupal/_eu-cookie-compliance-banner.css';
 
 @layer base, components, overrides, utilities;

@@ -1,0 +1,44 @@
+.eu-cookie-compliance-banner {
+  padding: 1.2rem;
+  background: #115A39;
+
+
+  .eu-cookie-compliance-message {
+    margin: 16px 0 0;
+
+    p {
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+
+  .eu-cookie-compliance-buttons {
+    display: flex;
+    gap: 2.4rem;
+    align-items: center;
+    margin: 0;
+  }
+  .decline-button {
+    all: unset;
+    margin-top: 1em;
+    border-radius: 0.4rem;
+    width: max-content;
+    text-decoration: underline;
+  }
+
+  .agree-button,
+  .decline-button,
+  .find-more-button {
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+
+  .agree-button {
+    border: 1px solid var(--white);
+    padding: 1.2rem 2rem;
+    border-radius: 0.4rem;
+    font-family: var(--font-family-primary), sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+  }
+}
