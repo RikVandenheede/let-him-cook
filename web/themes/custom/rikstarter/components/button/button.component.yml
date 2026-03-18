@@ -46,5 +46,3 @@ libraryOverrides:
   css:
     component:
       button.css: {}
-  js:
-    button.ts: {}

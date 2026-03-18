@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Navigation
+status: stable
+description: Responsive site navigation with an animated hamburger menu that slides in from the right on mobile.
+group: Organisms
+props:
+  type: object
+  properties:
+    aria_label:
+      type: string
+      title: Aria label
+      description: Accessible label for the <nav> element.
+      default: Main navigation
+slots:
+  logo:
+    title: Logo
+    description: Site logo or icon rendered on the left side of the nav bar.
+  links:
+    title: Links
+    description: Navigation links rendered inside the nav list.
+libraryOverrides:
+  css:
+    component:
+      navigation.css: {}
+  js:
+    navigation.ts: {}
+

@@ -4,6 +4,8 @@
    base/_typography.css
    ============================================================ */
 
+@import "../../src/styles/base/_breakpoints.css";
+
 @layer components {
   /* Base */
   .btn {

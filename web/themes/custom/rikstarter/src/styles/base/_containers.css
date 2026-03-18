@@ -1,0 +1,58 @@
+/* =============================================================================
+   Containers
+   =============================================================================
+   Utility classes for centred, max-width wrappers.
+
+   Usage:
+     <div class="container">…</div>
+     <div class="container container--sm">…</div>
+     <div class="container container--full">…</div>
+*/
+
+@layer base {
+  :root {
+    /* -------------------------------------------------------------------------
+       Container max-width tokens
+       These mirror the breakpoint scale so a container can always be pinned
+       to a specific breakpoint width.
+    ------------------------------------------------------------------------- */
+    --container-padding-x: 1.6rem;        /* inline gutter (mobile) */
+    --container-padding-x-md: 2.4rem;     /* inline gutter (md+)    */
+    --container-padding-x-lg: 3.2rem;     /* inline gutter (lg+)    */
+
+    --container-sm:  38.4rem;    /* 384 px  */
+    --container-md:  78.6rem;    /* 768 px  */
+    --container-lg:  102.4rem;    /* 1024 px */
+    --container-xl:  128rem;    /* 1280 px */
+    --container-2xl: 153.6rem;    /* 1536 px */
+  }
+}
+
+@layer utilities {
+  /* ── Base container ───────────────────────────────────────────────────── */
+  .container {
+    width: 100%;
+    max-width: var(--container-xl);
+    margin-inline: auto;
+    padding-inline: var(--container-padding-x);
+
+    @media (--bp-md) {
+      padding-inline: var(--container-padding-x-md);
+    }
+
+    @media (--bp-lg) {
+      padding-inline: var(--container-padding-x-lg);
+    }
+  }
+
+  /* ── Width-capped variants ────────────────────────────────────────────── */
+  .container--sm  { max-width: var(--container-sm);  }
+  .container--md  { max-width: var(--container-md);  }
+  .container--lg  { max-width: var(--container-lg);  }
+  .container--xl  { max-width: var(--container-xl);  }
+  .container--2xl { max-width: var(--container-2xl); }
+
+  /* ── Full-width (removes the max-width cap) ───────────────────────────── */
+  .container--full { max-width: none; }
+}
+

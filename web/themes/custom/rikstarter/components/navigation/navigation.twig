@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Navigation component.
+ *
+ * Props:
+ *   - aria_label (string): Accessible label for the <nav> element.
+ *                          Default: 'Main navigation'.
+ *
+ * Slots:
+ *   - logo: Site logo / icon rendered on the left of the nav bar.
+ *   - links: Navigation links rendered inside the slide-in menu.
+ */
+#}
+
+{% set aria_label = aria_label ?? 'Main navigation' %}
+
+<section class="nav" aria-label="{{ aria_label }}">
+  <div class="nav__bar container">
+
+    {# Logo / icon slot #}
+    <div class="nav__logo">
+      {% if  block('logo') is defined %}
+        {% block logo %}{% endblock %}
+      {% endif %}
+    </div>
+
+    {# Hamburger toggle – visible on mobile only #}
+    <button class="nav__toggle">
+      {{ source(componentMetadata.path ~ '/hamburger.svg') }}
+    </button>
+
+    <div class="nav__menu">
+      {% if  block('links') is defined %}
+        {% block links %}{% endblock %}
+      {% endif %}
+    </div>
+  </div>
+
+  {# Overlay backdrop #}
+  <div class="nav__overlay" aria-hidden="true"></div>
+</section>
+
+

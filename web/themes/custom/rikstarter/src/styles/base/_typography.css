@@ -15,7 +15,7 @@
     /* -------------------------------------------------------------------------
        Base
     ------------------------------------------------------------------------- */
-    --base-font-size: 16px;
+    --base-font-size: 62.5%; /* 1rem = 10px (respects user browser font size preference) */
 
     /* -------------------------------------------------------------------------
        Colors
@@ -26,57 +26,57 @@
        Headings
     ------------------------------------------------------------------------- */
     --heading-1-font-family: var(--font-family-heading);
-    --heading-1-font-size: 2.5rem; /* 40px */
+    --heading-1-font-size: 4rem; /* 40px */
     --heading-1-font-weight: 800;
     --heading-1-line-height: 1.05;
     --heading-1-letter-spacing: -0.02em;
 
     --heading-2-font-family: var(--font-family-heading);
-    --heading-2-font-size: 2rem; /* 32px */
+    --heading-2-font-size: 3.2rem; /* 32px */
     --heading-2-font-weight: 700;
     --heading-2-line-height: 1.2;
     --heading-2-letter-spacing: -0.015em;
 
     --heading-3-font-family: var(--font-family-heading);
-    --heading-3-font-size: 1.5rem; /* 24px */
+    --heading-3-font-size: 2.4rem; /* 24px */
     --heading-3-font-weight: 600;
     --heading-3-line-height: 1.25;
     --heading-3-letter-spacing: -0.01em;
 
     --heading-4-font-family: var(--font-family-heading);
-    --heading-4-font-size: 1.25rem; /* 20px */
+    --heading-4-font-size: 2rem; /* 20px */
     --heading-4-font-weight: 600;
     --heading-4-line-height: 1.3;
     --heading-4-letter-spacing: normal;
 
     --heading-5-font-family: var(--font-family-heading);
-    --heading-5-font-size: 1.125rem; /* 18px */
+    --heading-5-font-size: 1.8rem; /* 18px */
     --heading-5-font-weight: 600;
     --heading-5-line-height: 1.4;
     --heading-5-letter-spacing: normal;
 
     --heading-6-font-family: var(--font-family-heading);
-    --heading-6-font-size: 1rem; /* 16px */
+    --heading-6-font-size: 1.6rem; /* 16px */
     --heading-6-font-weight: 600;
     --heading-6-line-height: 1.5;
     --heading-6-letter-spacing: normal;
 
-    @media (--lg) {
-      --heading-1-font-size: 5.75rem; /* 90px */
+    @media (--bp-lg) {
+      --heading-1-font-size: 9rem; /* 90px */
       --heading-1-line-height: 1;
 
-      --heading-2-font-size: 2.25rem; /* 36px */
-      --heading-3-font-size: 1.75rem; /* 28px */
-      --heading-4-font-size: 1.375rem; /* 22px */
-      --heading-5-font-size: 1.125rem; /* 18px */
-      --heading-6-font-size: 1rem; /* 16px */
+      --heading-2-font-size: 3.6rem; /* 36px */
+      --heading-3-font-size: 2.8rem; /* 28px */
+      --heading-4-font-size: 2.2rem; /* 22px */
+      --heading-5-font-size: 1.8rem; /* 18px */
+      --heading-6-font-size: 1.6rem; /* 16px */
     }
 
     /* -------------------------------------------------------------------------
        Body text
     ------------------------------------------------------------------------- */
     --body-1-font-family: var(--font-family-primary);
-    --body-1-font-size: 1rem; /* 16px */
+    --body-1-font-size: 1.6rem; /* 16px */
     --body-1-font-weight: 400;
     --body-1-line-height: normal;
   }
@@ -84,7 +84,6 @@
   html {
     font-size: var(--base-font-size);
     line-height: normal;
-    overflow-x: hidden;
     font-weight: 400;
   }
 
@@ -154,7 +153,10 @@
      Body Text
   --------------------------------------------------------------------------- */
 
-  p {
+  p,
+  div,
+  span,
+  a {
     font-family: var(--body-1-font-family, var(--font-family-primary));
     font-size: var(--body-1-font-size);
     font-weight: var(--body-1-font-weight);

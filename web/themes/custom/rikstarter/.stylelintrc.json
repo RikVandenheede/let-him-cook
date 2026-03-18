@@ -13,9 +13,12 @@
           "utility",
           "variant",
           "custom-variant",
-          "screen"
+          "screen",
+          "custom-media"
         ]
       }
-    ]
+    ],
+    "media-query-no-invalid": null,
+    "media-feature-name-no-unknown": null
   }
 }

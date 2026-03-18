@@ -1,0 +1,36 @@
+/* ============================================================
+   Breakpoints
+   Define named custom media queries for use across all
+   components. Use these instead of raw pixel/rem values so
+   breakpoints stay consistent and can be updated in one place.
+
+   Usage:
+     @media (--bp-md) { … }
+     @media (--bp-lg-down) { … }
+   ============================================================ */
+
+/* ── Tokens (available as @custom-media) ───────────────────
+   Breakpoint scale:
+     xs  : up to 23.9375rem  (< 384 px)
+     sm  : 24rem+             (≥ 384 px)
+     md  : 48rem+             (≥ 768 px)
+     lg  : 64rem+             (≥ 1024 px)
+     xl  : 80rem+             (≥ 1280 px)
+     2xl : 96rem+             (≥ 1536 px)
+   ──────────────────────────────────────────────────────── */
+
+/* Min-width (mobile-first, "and up") */
+@custom-media --bp-sm   (width >= 24rem);
+@custom-media --bp-md   (width >= 48rem);
+@custom-media --bp-lg   (width >= 64rem);
+@custom-media --bp-xl   (width >= 80rem);
+@custom-media --bp-2xl  (width >= 96rem);
+
+/* Max-width ("and down", exclusive upper bound) */
+@custom-media --bp-xs-down   (width < 24rem);
+@custom-media --bp-sm-down   (width < 48rem);
+@custom-media --bp-md-down   (width < 64rem);
+@custom-media --bp-lg-down   (width < 80rem);
+@custom-media --bp-xl-down   (width < 96rem);
+
+

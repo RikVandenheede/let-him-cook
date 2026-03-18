@@ -24,6 +24,7 @@ export default defineConfig({
         "!src/styles/**/_*.css",
         "src/scripts/**/*.ts",
         "src/fonts/**/*.{woff,woff2,eot,ttf,otf}",
+        "src/icons/**/*.svg",
         "components/**/*.css",
         "components/**/*.ts",
       ]),
@@ -31,9 +32,11 @@ export default defineConfig({
         entryFileNames: "js/[name]-[hash].js",
         chunkFileNames: "chunk/[name]-[hash].js",
         assetFileNames: (assetInfo) => {
-          // Place all font files in assets/fonts/
           if (assetInfo.name && /\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name)) {
             return "assets/fonts/[name]-[hash][extname]";
+          }
+          if (assetInfo.name && /\.svg$/.test(assetInfo.name)) {
+            return "assets/icons/[name]-[hash][extname]";
           }
           return "css/[name]-[hash][extname]";
         },
