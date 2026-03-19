@@ -4,6 +4,11 @@
     overflow-x: hidden;
   }
 
+  html.no-scroll {
+    height: 100dvh;
+    overflow: hidden;
+  }
+
   body {
     margin: 0;
     overflow-x: hidden;

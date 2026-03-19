@@ -87,11 +87,6 @@
     font-weight: 400;
   }
 
-  html.no-scroll {
-    height: 100dvh;
-    overflow: hidden;
-  }
-
   body {
     font-family: var(--font-family-primary);
     color: var(--color-black);
