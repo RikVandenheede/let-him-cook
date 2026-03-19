@@ -1,0 +1,17 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Footer
+status: stable
+description: Site-wide footer with a top section (brand info, navigation menu, contact details) and a bottom bar (copyright year + legal links).
+group: Organisms
+slots:
+  menu:
+    title: Footer navigation menu
+    description: A rendered Drupal menu block for the primary footer navigation links.
+  bottom_links:
+    title: Bottom links
+    description: A rendered Drupal menu block for legal / cookie / policy links shown in the bottom bar.
+libraryOverrides:
+  css:
+    component:
+      footer.css: {}
+

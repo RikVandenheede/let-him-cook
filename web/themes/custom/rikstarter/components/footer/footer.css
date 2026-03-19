@@ -1,0 +1,153 @@
+@import "../../src/styles/base/_breakpoints.css";
+
+/* ============================================================
+   Footer component
+   ============================================================ */
+
+/* ── Shared wrapper ─────────────────────────────────────────── */
+.footer {
+  background: var(--grey);
+}
+
+/* ── Top section ────────────────────────────────────────────── */
+.footer__top {
+  padding-block: 8rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer__top-inner {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+
+  @media (--bp-md) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  @media (--bp-lg) {
+    grid-template-columns: 2fr 1fr 1.5fr;
+  }
+}
+
+/* ── Brand column ───────────────────────────────────────────── */
+.footer__brand-name {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin: 0 0 1.2rem;
+}
+
+.footer__brand-desc {
+  margin: 0;
+  max-width: 36ch;
+}
+
+/* ── Navigation column ──────────────────────────────────────── */
+.footer__nav ul:not(.contextual-links) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__nav a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+
+/* ── Contact column ─────────────────────────────────────────── */
+.footer__contact {
+  font-style: normal;
+}
+
+.footer__contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.footer__contact-label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.footer__contact-value {
+  line-height: 1.5;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ── Bottom bar ─────────────────────────────────────────────── */
+.footer__bottom {
+  padding-block: 2rem;
+}
+
+.footer__bottom-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  align-items: flex-start;
+  position: relative;
+
+  @media (--bp-md) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2rem 3.2rem auto 3.2rem;
+    height: 0.1rem;
+    width: calc(100% - (3.2rem * 2));
+    background: var(--grey-dark);
+  }
+}
+
+.footer__copyright {
+  margin: 0;
+}
+
+/* ── Bottom legal links ─────────────────────────────────────── */
+.footer__bottom-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+}
+
+.footer__bottom-links a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    text-decoration: underline;
+  }
+}
+

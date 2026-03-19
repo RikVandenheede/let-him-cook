@@ -1,0 +1,84 @@
+{#
+/**
+ * @file
+ * Footer component.
+ *
+ * Slots:
+ *   - menu: Rendered Drupal block for the primary footer navigation.
+ *   - bottom_links: Rendered Drupal block for legal / cookie policy links.
+ */
+#}
+
+<footer class="footer" role="contentinfo">
+
+  {# ── Top section ──────────────────────────────────────────────────────── #}
+  <div class="footer__top">
+    <div class="container footer__top-inner">
+
+      {# Brand column #}
+      <div class="footer__brand">
+        <p class="footer__brand-name">OsteoCare</p>
+        <p class="footer__brand-desc">
+          Specialised osteopathic care for all ages. We combine evidence-based
+          techniques with a personal approach to help you move and feel better.
+        </p>
+      </div>
+
+      {# Navigation menu column #}
+      <nav class="footer__nav" aria-label="Footer navigation">
+        {% if block('menu') is defined %}
+          {% block menu %}{% endblock %}
+        {% endif %}
+      </nav>
+
+      {# Contact column #}
+      <address class="footer__contact">
+        <dl class="footer__contact-list">
+
+          <div class="footer__contact-item">
+            <dt class="footer__contact-label">Telephone</dt>
+            <dd class="footer__contact-value">
+              <a href="tel:+3212345678">+32 1 234 56 78</a>
+            </dd>
+          </div>
+
+          <div class="footer__contact-item">
+            <dt class="footer__contact-label">Email</dt>
+            <dd class="footer__contact-value">
+              <a href="mailto:info@osteocare.be">info@osteocare.be</a>
+            </dd>
+          </div>
+
+          <div class="footer__contact-item">
+            <dt class="footer__contact-label">Address</dt>
+            <dd class="footer__contact-value">
+              Kliniekstraat 42<br>
+              2000 Antwerp, Belgium
+            </dd>
+          </div>
+
+        </dl>
+      </address>
+
+    </div>
+  </div>{# /.footer__top #}
+
+  {# ── Bottom bar ───────────────────────────────────────────────────────── #}
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+
+      <p class="footer__copyright">
+        &copy; Copyright {{ "now"|date("Y") }} OsteoCare. All rights reserved.
+      </p>
+
+      <nav class="footer__bottom-links" aria-label="Legal links">
+        {% if block('bottom_links') is defined %}
+          {% block bottom_links %}{% endblock %}
+        {% endif %}
+      </nav>
+
+    </div>
+  </div>{# /.footer__bottom #}
+
+</footer>
+

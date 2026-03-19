@@ -47,9 +47,7 @@
 #}
 <div class="layout-container">
 
-  <header role="banner">
-    {{ page.header }}
-  </header>
+  {{ page.header }}
 
   {{ page.highlighted }}
 
@@ -67,10 +65,6 @@
 
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  {{ page.footer }}
 
 </div>{# /.layout-container #}
