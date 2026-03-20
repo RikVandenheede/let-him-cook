@@ -1,0 +1,43 @@
+# Breakpoints for the rikstarter theme.
+
+rikstarter.xs:
+  label: 'XS (< 640px) — Mobile'
+  mediaQuery: 'screen'
+  weight: 0
+  multipliers:
+    - 1x
+
+rikstarter.sm:
+  label: 'SM (≥ 640px) — Small Tablet'
+  mediaQuery: 'screen and (min-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+rikstarter.md:
+  label: 'MD (≥ 768px) — Tablet'
+  mediaQuery: 'screen and (min-width: 768px)'
+  weight: 2
+  multipliers:
+    - 1x
+
+rikstarter.lg:
+  label: 'LG (≥ 1024px) — Desktop'
+  mediaQuery: 'screen and (min-width: 1024px)'
+  weight: 3
+  multipliers:
+    - 1x
+
+rikstarter.xl:
+  label: 'XL (≥ 1280px) — Large Desktop'
+  mediaQuery: 'screen and (min-width: 1280px)'
+  weight: 4
+  multipliers:
+    - 1x
+
+rikstarter.2xl:
+  label: '2XL (≥ 1536px) — Extra Large Desktop'
+  mediaQuery: 'screen and (min-width: 1536px)'
+  weight: 5
+  multipliers:
+    - 1x
